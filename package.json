@@ -1,0 +1,20 @@
+{
+  "name": "marcelino-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Marcelino.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server ."
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Marcelino",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
