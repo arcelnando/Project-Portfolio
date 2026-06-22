@@ -1,4 +1,3 @@
-// DOM Elements
 const modeToggle = document.getElementById('modeToggle');
 const body = document.body;
 const nav = document.querySelector('.nav');
@@ -7,7 +6,6 @@ const navLinks = document.querySelector('.nav-links');
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorOutline = document.querySelector('.cursor-outline');
 
-// Custom Mouse Cursor
 window.addEventListener('mousemove', (e) => {
     cursorDot.style.left = `${e.clientX}px`;
     cursorDot.style.top = `${e.clientY}px`;
@@ -21,7 +19,6 @@ window.addEventListener('mousemove', (e) => {
     });
 });
 
-// Cursor effects on hover
 const interactiveElements = document.querySelectorAll('a, button, .skill-card, .social-item, .email-link, .mode-toggle-small');
 
 interactiveElements.forEach(element => {
@@ -42,13 +39,11 @@ interactiveElements.forEach(element => {
     });
 });
 
-// Dark/Light Mode Toggle
 let isLightMode = false;
 
 modeToggle.addEventListener('click', (e) => {
     isLightMode = !isLightMode;
     
-    // Create touch effect
     createTouchEffect(e);
     
     if (isLightMode) {
@@ -61,19 +56,16 @@ modeToggle.addEventListener('click', (e) => {
         modeToggle.style.transform = 'rotate(0deg) scale(1.2)';
     }
     
-    // Reset transform after animation
     setTimeout(() => {
         modeToggle.style.transform = '';
     }, 400);
 });
 
-// Mobile Menu Toggle
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
 });
 
-// Close mobile menu when clicking a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -81,7 +73,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Touch Effect Function
 function createTouchEffect(event) {
     const touch = document.createElement('div');
     touch.style.position = 'fixed';
@@ -100,13 +91,11 @@ function createTouchEffect(event) {
     
     document.body.appendChild(touch);
     
-    // Animate
     setTimeout(() => {
         touch.style.transform = 'scale(1)';
         touch.style.opacity = '1';
     }, 10);
     
-    // Fade out and remove
     setTimeout(() => {
         touch.style.opacity = '0';
     }, 200);
@@ -118,12 +107,10 @@ function createTouchEffect(event) {
     }, 600);
 }
 
-// Add touch effect to interactive elements
 interactiveElements.forEach(element => {
     element.addEventListener('click', createTouchEffect);
 });
 
-// Scroll animations
 const revealElements = document.querySelectorAll('.reveal');
 
 const revealOnScroll = () => {
@@ -140,7 +127,6 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// Navbar scroll effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         nav.classList.add('scrolled');
@@ -149,7 +135,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -166,7 +151,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect on photo
 const photoFrame = document.querySelector('.photo-frame');
 
 window.addEventListener('mousemove', (e) => {
@@ -178,15 +162,14 @@ window.addEventListener('mousemove', (e) => {
     photoFrame.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
 });
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    // Fade in
+    
     document.body.style.opacity = '0';
     setTimeout(() => {
         document.body.style.transition = 'opacity 1s ease';
         document.body.style.opacity = '1';
     }, 100);
     
-    // Initial scroll animation check
     revealOnScroll();
 });
+

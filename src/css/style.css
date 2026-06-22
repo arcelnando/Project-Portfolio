@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +42,6 @@ body.light-mode {
     cursor: none;
 }
 
-/* ===== CUSTOM MOUSE CURSOR ===== */
 .cursor-dot {
     width: 8px;
     height: 8px;
@@ -80,12 +78,10 @@ body.light-mode {
     mix-blend-mode: normal;
 }
 
-/* Hide default cursor */
 a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     cursor: none;
 }
 
-/* ===== BACKGROUND LAYERS ===== */
 .bg-layers {
     position: fixed;
     top: 0;
@@ -120,7 +116,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     100% { transform: translateY(-50%); }
 }
 
-/* ===== NAVBAR TRANSPARAN ===== */
 .nav {
     position: fixed;
     top: 0;
@@ -153,7 +148,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     padding: 0 40px;
 }
 
-/* Logo Styling */
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
@@ -177,7 +171,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--gray);
 }
 
-/* Menu Toggle untuk Mobile */
 .menu-toggle {
     display: none;
     background: none;
@@ -192,7 +185,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--black);
 }
 
-/* Nav Links Styling */
 .nav-links {
     display: flex;
     gap: 40px;
@@ -242,7 +234,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     width: 100%;
 }
 
-/* ===== TOGGLE MODE TRANSPARAN ===== */
 .mode-toggle-small {
     width: 30px;
     height: 30px;
@@ -277,7 +268,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     background: rgba(0, 0, 0, 0.05);
 }
 
-/* ===== HERO SECTION ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -302,7 +292,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     z-index: 2;
 }
 
-/* Nama dengan Efek Transparan */
 .name-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 100px;
@@ -319,7 +308,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--black);
 }
 
-/* Efek transparan pada nama */
 .name-title::before {
     content: attr(data-text);
     position: absolute;
@@ -396,7 +384,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--gray);
 }
 
-/* Photo Container */
 .photo-container {
     position: relative;
     z-index: 1;
@@ -466,7 +453,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     );
 }
 
-/* ===== ABOUT SECTION ===== */
 .about {
     position: relative;
     padding: 200px 0;
@@ -542,7 +528,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--gray);
 }
 
-/* ===== SKILLS SECTION ===== */
 .skills {
     position: relative;
     padding: 200px 0;
@@ -660,7 +645,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--black);
 }
 
-/* ===== CONTACT SECTION ===== */
 .contact {
     position: relative;
     padding: 200px 0;
@@ -790,7 +774,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     text-transform: uppercase;
 }
 
-/* ===== FOOTER ===== */
 .footer {
     padding: 100px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -844,7 +827,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     color: var(--gray);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1200px) {
     .name-title {
         font-size: 80px;
@@ -1018,7 +1000,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     }
 }
 
-/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -1048,7 +1029,6 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     background: var(--gray);
 }
 
-/* ===== SCROLL ANIMATIONS ===== */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -1059,3 +1039,4 @@ a, button, .mode-toggle-small, .nav-link, .email-link, .social-item {
     opacity: 1;
     transform: translateY(0);
 }
+
